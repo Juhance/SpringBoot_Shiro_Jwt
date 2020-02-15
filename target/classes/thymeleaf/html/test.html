@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<!-- <table align='center' border='1' cellspacing='0'>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>编辑</td>
+        <td>删除</td>
+    </tr>
+    <tr th:each="c:${page.list}">
+        <td th:text="${c.uid}"></td>
+        <td th:text="${c.userName}"></td>
+        <td><a th:href="@{/editCategory(id=${c.uid})}">编辑</a></td>
+        <td>删除</td>
+    </tr>
+</table>
+<br/>
+<div>
+    <a th:href="@{/user/test(start=0)}">[首  页]</a>
+    <a th:href="@{/user/test(start=${page.pageNum-1})}">[上一页]</a>
+    <a th:href="@{/user/test(start=${page.pageNum+1})}">[下一页]</a>
+    <a th:href="@{/user/test(start=${page.pages})}">[末  页]</a>
+</div> -->
+<div id="app">
+	<button @click="user.manager=!user.manager">显示第一个页面</button>
+	<div v-if="user.manager">
+		<p>显示第一个页面</p>
+	</div>
+	<button @click="user.permission=!user.permission">显示第二个页面</button>
+	<div v-if="user.permission">
+		<p>显示第二个页面</p>
+	</div>
+</div>
+<script type="text/javascript">
+	new Vue({
+		el:"#app",
+		data:{
+			message:'hello world',
+			user:{
+				manager:false,
+				permission:false
+			}
+		},
+		methods:{
+			seach:function(e){
+				alert(e.target.value);
+			}
+		}
+	})
+</script>
+</body>
+</html>
