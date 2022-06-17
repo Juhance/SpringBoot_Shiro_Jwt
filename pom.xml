@@ -13,7 +13,7 @@
   	<version>1.5.9.RELEASE</version>
   </parent>
   <properties>
-  	 <fastjson.version>1.2.58</fastjson.version>
+  	 <fastjson.version>1.2.83</fastjson.version>
   	 <jwt.version>3.8.0</jwt.version>
   	 <mybatis.plus.starter.version>3.1.0</mybatis.plus.starter.version>
   </properties>
